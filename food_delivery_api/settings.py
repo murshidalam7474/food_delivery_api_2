@@ -86,6 +86,10 @@ DATABASES = {
     }
 }
 
+import dj_database_url
+DATABASES={
+    'default':dj_database_url.parse('postgres://food_api_postgresql_db_user:8Y1jN9KkdaPbm6BxEPy63GvoIZ9Hz3iL@dpg-cn68s8gcmk4c73dusmrg-a.oregon-postgres.render.com/food_api_postgresql_db')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -116,8 +120,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
-
+  
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
